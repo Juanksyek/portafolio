@@ -12,4 +12,3 @@ export class AccordionComponent {
     this.reportsOpen = !this.reportsOpen;
   }
 }
-

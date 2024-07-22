@@ -1,4 +1,5 @@
 // src/app/utils/utils.ts
+//Menu en moviles
 export function selected(event: Event): void {
     const targeted = event.target as HTMLElement;
     const clicked = targeted.parentElement;
@@ -55,5 +56,4 @@ export function selected(event: Event): void {
       newText.innerText = text;
       s1.classList.remove("hidden");
     }
-  }
-  
+  } 
