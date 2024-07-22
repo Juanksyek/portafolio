@@ -1,0 +1,5 @@
+.custom-underline::after {
+  content: "";
+  @apply absolute left-0 bottom-0 w-full h-[3px] bg-gradient-to-br to-blue-600 from-purple-600 rounded-sm;
+  transform: skewX(-15deg);
+}

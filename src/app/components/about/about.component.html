@@ -1,5 +1,127 @@
 <!-- src/app/components/about/about.component.html -->
-<section class="container mx-auto mt-8 p-4 bg-white shadow-md rounded">
-  <h2 class="text-2xl font-bold mb-4">Sobre mí</h2>
-  <p class="mt-4">Aquí va la información perrona</p>
+<section class="container mx-auto p-12 bg-white shadow-xl rounded-lg">
+  <div class="flex flex-row">
+    <div class="rounded-lg p-4 w-max bg-white shadow-md basis-1/2">
+      <img
+        src="../../../assets/images/profile-image.jpeg"
+        class="w-28 rounded-full shadow-xl bg-gradient-to-br from-purple-600 to-blue-500 p-1"
+        alt="Profile Picture"
+      />
+      <h1 class="text-4xl font-bold mt-2 text-gray-600">Juan Flores</h1>
+      <p class="text-base font-semibold text-gray-600">Web Developer full-stack</p>
+      <p class="text-xs text-gray-600">I build perfect experiences, engaging and digital content.</p>
+    </div>
+    <div class="basis-1/2">
+      <div class="rounded-lg basis-120 grid place-items-center p-4">
+        <lottie-player 
+          src="../../../assets/animations/Animation-1.json" 
+          background="##FFFFFF" 
+          speed="1" 
+          style="width: 
+          200px; height: 
+          200px" 
+          loop autoplay direction="1" 
+          mode="normal">
+        </lottie-player>
+      </div>
+    </div>
+  </div>
+  <h2 class="text-2xl font-bold mb-4 w-max mt-4 text-gray-600">Building dreams...</h2>
+  <p class="mt-4 text-sm text-gray-600">
+    Hello everyone, my name is <span class="text-purple-600 font-semibold">Juan Carlos</span> and I live in Mexico. Throughout my
+    years of experience, <span class="text-purple-600 font-semibold">national clients</span> and <span class="text-purple-600 font-semibold">companies</span> have relied on my skills
+    to create specific projects according to their needs.
+  </p>
+  <p class="mt-4 text-sm text-gray-600">
+    I have worked with several companies and startups related to the <span class="text-purple-600 font-semibold">IT area and
+      the e-commerce market</span>.
+  </p>
+  <p class="mt-4 text-sm text-gray-600">
+    My main goal is to create beautiful, functional and amazing looking
+    applications. I am always <span class="text-purple-600 font-semibold">learning new things</span> and familiarizing myself with
+    new technologies, frameworks and <span class="text-purple-600 font-semibold">work processes</span>, in order to streamline and
+    provide the best performance and quality in the projects I participate.
+  </p>
+  <p class="mt-4 text-sm text-gray-600">
+    When I'm not in front of my computer, I like to do recreational and physical
+    activities, such as exercising, playing sports or just taking a walk in the
+    woods. <span class="text-purple-600 font-semibold">I love video games</span> and although I don't frequent this activity, I
+    enjoy a good story or relaxing game to spend the afternoon.
+  </p>
+  <div class="container">
+    <div class="contain-content grid place-items-center">
+      <h2 class="text-2xl font-bold mb-4 w-max mt-4 text-gray-600 pt-4">My expertise</h2>
+    </div>
+    <div class="flex flex-row gap-6">
+      <div class="basis-1/3 shadow-md rounded-lg">
+        <div class="basis-120 grid p-4">
+          <div class="grid grid-flow-col gap-2">
+            <div class="row-span-3 grid justify-items-center place-items-center">
+              <svg width="60px" height="60px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
+                <path d="M4 3L5.77778 20.0899L12 22L18.2222 20.0899L20 3H4Z" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M17 7H7.5L8 11.5H16L15.5 17L12 18L8.5 17L8.25 14.5" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <div class="col-span-2">
+              <h3 class="text-xl font-semibold w-max text-gray-600">
+                <span class="relative custom-underline">Front-end Developer</span>
+              </h3>
+            </div>
+            <div class="row-span-2 col-span-2">
+              <p class="text-xs text-gray-600">I love UI/UX. Over 3 years of development experience in HTML, CSS, JS, Angular, React and Vue.js.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="basis-1/3 shadow-md rounded-lg">
+        <div class="basis-120 grid place-items-center p-4">
+          <div class="grid grid-flow-col gap-2">
+            <div class="row-span-3 grid justify-items-center place-items-center">
+              <svg width="60px" height="60px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
+                <path d="M3.2 14.2222V4C3.2 2.89543 4.09543 2 5.2 2H18.8C19.9046 2 20.8 2.89543 20.8 4V14.2222M3.2 14.2222H20.8M3.2 14.2222L1.71969 19.4556C1.35863 20.7321 2.31762 22 3.64418 22H20.3558C21.6824 22 22.6414 20.7321 22.2803 19.4556L20.8 14.2222" stroke="#8745FF" stroke-width="1.5"></path>
+                <path d="M11 19L13 19" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14 6L16 8L14 10" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M10 6L8 8L10 10" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <div class="col-span-2">
+              <h3 class="text-xl font-semibold w-max text-gray-600">
+                <span class="relative custom-underline">WebOps Maintenance</span>
+              </h3>              
+            </div>
+            <div class="row-span-2 col-span-2">
+              <p class="text-xs text-gray-600">Experienced in tools like GitLab, Netlify, AWS, Docker, components of security and Hosting websites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="basis-1/3 shadow-md rounded-lg">
+        <div class="basis-120 grid place-items-center p-4">
+          <div class="grid grid-flow-col gap-2">
+            <div class="row-span-3 grid justify-items-center place-items-center">
+              <svg width="60px" stroke-width="1.5" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
+                <path d="M10 17L9.33334 17C8.22877 17 7.33334 16.1047 7.33334 15.0002C7.33334 14.3284 7.33334 13.6211 7.33333 13.1111C7.33333 12.5556 6 12 6 12C6 12 7.33333 11.4444 7.33334 10.8889C7.33334 10.4359 7.33334 9.70586 7.33334 8.99998C7.33334 7.89541 8.22877 7 9.33334 7L10 7" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14 17L14.6667 17C15.7712 17 16.6667 16.1047 16.6667 15.0002C16.6667 14.3284 16.6667 13.6211 16.6667 13.1111C16.6667 12.5556 18 12 18 12C18 12 16.6667 11.4444 16.6667 10.8889C16.6667 10.4359 16.6667 9.70586 16.6667 8.99998C16.6667 7.89541 15.7712 7 14.6667 7L14 7" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21 3.6V20.4C21 20.7314 20.7314 21 20.4 21H3.6C3.26863 21 3 20.7314 3 20.4V3.6C3 3.26863 3.26863 3 3.6 3H20.4C20.7314 3 21 3.26863 21 3.6Z" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <div class="col-span-2">
+              <h3 class="text-xl font-semibold w-max text-gray-600">
+                <span class="relative custom-underline">Backend Developer</span>
+              </h3>
+            </div>
+            <div class="row-span-2 col-span-2">
+              <p class="text-xs text-gray-600">Experienced in both functional: Java, TypeScript, Node.js, Nest.js, JavaScript and Go.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="contain-content grid place-items-center">
+      <h2 class="text-2xl font-bold mb-4 w-max mt-4 text-gray-600 pt-4">My experience</h2>
+    </div>
+    <app-accordion></app-accordion>
+  </div>
 </section>
