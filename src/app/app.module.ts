@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AccordionComponent } from './accordion/accordion.component';
+import { InfiniteScrollComponent } from './infinite-scroll/infinite-scroll.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AccordionComponent } from './accordion/accordion.component';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
-    AccordionComponent
+    AccordionComponent,
+    InfiniteScrollComponent
   ],
   imports: [
     BrowserAnimationsModule,

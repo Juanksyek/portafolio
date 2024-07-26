@@ -1,0 +1,13 @@
+<div class="infinite-scroll-container overflow-hidden relative max-md:w-80">
+  <div class="scroll-content flex flex-col gap-4 justify-center items-center w-full h-full">
+    <div class="tag-list flex flex-col gap-4">
+      <div class="loop-slider" *ngFor="let row of rows; let i = index">
+        <div class="inner">
+          <span *ngFor="let tag of shuffleTags()" class="tag text-sm text-gray-600 bg-white shadow-lg rounded-lg">
+            <span class="hash">{{hash}}</span> {{tag}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

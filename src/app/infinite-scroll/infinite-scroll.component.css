@@ -1,0 +1,62 @@
+.infinite-scroll-container {
+  max-width: 56rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tag-list {
+  width: fit-content;
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.loop-slider {
+  display: flex;
+  width: fit-content;
+  animation: loop 100s linear infinite;
+}
+
+.inner {
+  display: flex;
+  width: fit-content;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 0.1rem 1rem;
+  margin-right: 1rem;
+}
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    transparent 30%,
+    transparent 70%,
+    #ffffff
+  );
+  position: absolute;
+  inset: 0;
+}
+
+.center {
+  display: grid;
+  justify-content: center;
+}
+
+.hash {
+  color: #8745ff;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
