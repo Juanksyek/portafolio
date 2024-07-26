@@ -15,7 +15,7 @@
 .loop-slider {
   display: flex;
   width: fit-content;
-  animation: loop 100s linear infinite;
+  animation: loop 150s linear infinite;
 }
 
 .inner {
