@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* styles.css o cualquier archivo CSS global */
+body {
+  @apply bg-white text-black;
+}
+
+header{
+  @apply bg-gray-600 text-gray-400;
+}
+
+footer{
+  @apply bg-gray-600 text-gray-400;
+}
+
+.dark body {
+  @apply bg-gray-600 text-gray-400;
+}
+
+/* Ejemplo de cómo aplicar estilos oscuros a otros elementos */
+.dark .tag {
+  @apply bg-gray-800 text-gray-400;
+}
+
+.hash {
+  color: #8745ff;
+}
+
+.dark .hash {
+  color: #bb86fc;
+}

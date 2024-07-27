@@ -1,50 +1,52 @@
 <!-- src/app/components/header/header.component.html -->
-<header class="shadow-md fixed top-0 left-0 w-full z-10 bg-white">
+<header class="shadow-md fixed top-0 left-0 w-full z-10 bg-white dark:bg-gray-800 transition-colors">
   <div class="container mx-auto flex flex-wrap justify-between items-center max-w-full">
     <div class="2xl:container 2xl:mx-auto w-full">
-      <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-      <div class="bg-white rounded shadow-lg py-5 px-7">
+      <div class="bg-white dark:bg-gray-800 rounded shadow-lg py-5 px-7 transition-colors">
           <nav class="flex justify-between">
               <div class="flex items-center space-x-3 lg:pr-6 pr-6">
-                  <svg width="34" height="34" viewBox="0 0 34 34" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
-                    <path d="M13.5 6L10 18.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M6.5 8.5L3 12L6.5 15.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M17.5 8.5L21 12L17.5 15.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <svg width="34" height="34" viewBox="0 0 34 34" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000" class="dark:text-white transition-colors">
+                    <path d="M13.5 6L10 18.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.5 8.5L3 12L6.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M17.5 8.5L21 12L17.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>                        
-                  <h2 class="font-normal text-2xl leading-6 text-gray-800">Juan Flores</h2>
+                  <h2 class="font-normal text-2xl leading-6 text-gray-800 dark:text-white transition-colors">Juan Flores</h2>
               </div>
 
               <!-- For medium and plus sized devices -->
               <ul class="hidden md:flex flex-auto space-x-5">
                   <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 border-white rounded">
-                    <a routerLink="/" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 inline-block">
+                    <a routerLink="/" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 dark:text-white inline-block transition-colors">
                         <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white from-white"></span>
+                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white dark:to-gray-800 from-white dark:from-gray-800"></span>
                         <span class="relative">About me</span>
                     </a>
                   </li>
                   <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 border-white rounded">
-                    <a routerLink="/projects" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 inline-block">
+                    <a routerLink="/projects" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 dark:text-white inline-block transition-colors">
                         <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white from-white"></span>
+                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white dark:to-gray-800 from-white dark:from-gray-800"></span>
                         <span class="relative">Projects</span>
                     </a>
                   </li>
                   <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 border-white rounded">
-                    <a routerLink="/contact" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 inline-block">
+                    <a routerLink="/contact" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 dark:text-white inline-block transition-colors">
                         <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white from-white"></span>
+                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white dark:to-gray-800 from-white dark:from-gray-800"></span>
                         <span class="relative">Contact</span>
                     </a>
                   </li>
               </ul>
-              <div class=" flex space-x-5 justify-center items-center pl-2">
-                  <div class="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">
-                         <!-- contenido pendiente -->
+              <div class="flex space-x-5 justify-center items-center pl-2">
+                  <div class="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                    <button (click)="toggleDarkMode()" class="toggle-button relative inline-flex items-center cursor-pointer">
+                      <div class="block w-14 h-8 rounded-full border border-indigo-600 dark:border-white transition-colors"></div>
+                      <div class="dot absolute left-1 top-1 bg-indigo-600 dark:bg-white w-6 h-6 rounded-full transition-transform transform"></div>
+                    </button>
                   </div>                       
               </div>
           </nav>
-          <!-- for smaller devcies -->
+          <!-- for smaller devices -->
 
           <div class="block md:hidden w-full mt-5">
             <div (click)="selectNew()" class="cursor-pointer px-4 py-3 text-white bg-indigo-600 rounded flex justify-between items-center w-full">
@@ -57,10 +59,10 @@
               </svg>
             </div>
             <div class="relative">
-              <ul id="list" class="z-10 hidden font-normal text-base leading-4 absolute top-2 w-full rounded shadow-md bg-white">
-                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/" class="ml-4 hover:text-gray-400">About me</a></li>
-                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/projects" class="ml-4 hover:text-gray-400">Projects</a></li>
-                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/contact" class="ml-4 hover:text-gray-400">Contact</a></li>
+              <ul id="list" class="z-10 hidden font-normal text-base leading-4 absolute top-2 w-full rounded shadow-md bg-white dark:bg-gray-800 transition-colors">
+                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 dark:text-white bg-gray-50 dark:bg-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/" class="ml-4 hover:text-gray-400">About me</a></li>
+                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 dark:text-white border border-white bg-gray-50 dark:bg-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/projects" class="ml-4 hover:text-gray-400">Projects</a></li>
+                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 dark:text-white border border-white bg-gray-50 dark:bg-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/contact" class="ml-4 hover:text-gray-400">Contact</a></li>
               </ul>
             </div>
           </div>
