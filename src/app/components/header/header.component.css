@@ -1,15 +1,19 @@
 /* src/app/components/header/header.component.css */
 .toggle-button {
-    background-color: transparent;
-    outline: none;
-    border: none;
-  }
-  
-  .dot {
-    position: absolute;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  input:checked ~ .toggle-button .dark .dot {
-    transform: translateX(100%);
-  }
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.dot {
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+input:checked ~ .toggle-button .dark .dot {
+  transform: translateX(100%);
+}
+
+.menu-color-mobile {
+  background-color: #8745ff;
+}
