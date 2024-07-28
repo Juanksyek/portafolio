@@ -10,7 +10,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-input:checked ~ .toggle-button .dark .dot {
+.dot.move {
   transform: translateX(100%);
 }
 
