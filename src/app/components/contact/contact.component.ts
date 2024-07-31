@@ -13,14 +13,27 @@ export class ContactComponent {
     tel: ''
   };
 
+  successMessage: string | null = null;
+  errorMessage: string | null = null;
+
   constructor(private contactService: ContactService) {}
 
   onSubmit() {
-    this.contactService.saveContact(this.contact).subscribe(response => {
-      console.log('Contact saved', response);
-      this.contact = { name: '', email: '', tel: '' };
-    }, error => {
+    this.contactService.saveContact(this.contact).subscribe(
+      response => {
+      console.log('Contact savedl', response);
+      this.successMessage = 'Send succesfully.';
+      this.errorMessage = null;
+      this.contact = {name:'', email:'', tel:'',};
+
+      setTimeout(()=> this.successMessage = null, 5000);
+    },
+    error => {
       console.error('Error saving contact', error);
+      this.errorMessage = 'Failed to send your data. Please, try again.';
+      this.successMessage = null;
+
+      setTimeout(()=> this.successMessage = null, 5000);
     });
   }
 }
