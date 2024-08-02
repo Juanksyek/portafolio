@@ -21,11 +21,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/portafolio",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -37,16 +37,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -59,27 +58,12 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
-              "optimization": true,
-              "sourceMap": false,
-              "extractCss": false,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "extraWebpackConfig": "./webpack.config.js"
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
-              "sourceMap": true,
-              "extractCss": false,
-              "namedChunks": true,
-              "aot": false,
               "extractLicenses": false,
-              "vendorChunk": true,
-              "buildOptimizer": false,
-              "extraWebpackConfig": "./webpack.config.js"
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -88,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portafolio:build:production"
+              "buildTarget": "portafolio:build:production"
             },
             "development": {
-              "browserTarget": "portafolio:build:development"
+              "buildTarget": "portafolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portafolio:build"
+            "buildTarget": "portafolio:build"
           }
         },
         "test": {
