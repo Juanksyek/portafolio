@@ -23,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "extraWebpackConfig": "./webpack.config.js",
             "outputPath": "dist/portafolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -83,7 +84,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "portafolio:build"
+            "buildTarget": "portafolio:build",
+            "extraWebpackConfig": "./webpack.config.js"
           }
         },
         "test": {
