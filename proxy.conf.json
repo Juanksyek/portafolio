@@ -1,0 +1,7 @@
+{
+    "/node_modules/*": {
+      "target": "http://localhost:4200/",
+      "secure": false,
+      "logLevel": "debug"
+    }
+  }  
