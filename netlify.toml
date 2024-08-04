@@ -1,5 +1,5 @@
 [build]
-  command = "ng build --prod"
+  command = "npm run build"
   publish = "dist/portafolio/browser"
 
 [[redirects]]
