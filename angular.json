@@ -5,27 +5,16 @@
   "projects": {
     "portafolio": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/portafolio",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -37,9 +26,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/@lottiefiles/lottie-player/dist/tgs-player.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -48,6 +35,8 @@
                 "namedChunks": false,
                 "aot": true,
                 "extractLicenses": true,
+                "vendorChunk": false,
+                "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -65,22 +54,20 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "proxyConfig": "proxy.conf.json"
-          },
           "configurations": {
             "production": {
-              "buildTarget": "portafolio:build:production"
+              "browserTarget": "portafolio:build:production"
             },
             "development": {
-              "buildTarget": "portafolio:build:development"
+              "browserTarget": "portafolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "portafolio:build"
+            "browserTarget": "portafolio:build"
           }
         },
         "test": {
