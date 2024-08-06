@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portafolio/browser",
+            "outputPath": "dist/portafolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -43,11 +43,6 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
-                "sourceMap": false,
-                "namedChunks": false,
-                "aot": true,
-                "extractLicenses": true,
               "budgets": [
                 {
                   "type": "initial",
