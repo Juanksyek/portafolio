@@ -2,9 +2,10 @@
 <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen dark:bg-gray-800 transition-colors">
   <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
     <div class="py-5">
-      <details class="group">
+      <details class="group" [attr.open]="openIndex === 0 ? true : null">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
+          (click)="toggleIndex(0)"
         >
 		  <div class="container flex justify-between items-center">
 			  <span class="text-base font-semibold text-gray-600 dark:text-gray-400">Backend Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">Grupo PROMASS</span></span>
@@ -48,9 +49,10 @@
       </details>
     </div>
     <div class="py-5">
-      <details class="group">
+      <details class="group" [attr.open]="openIndex === 1 ? true : null">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
+          (click)="toggleIndex(1)"
         >
 		<div class="container flex justify-between items-center">
 			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Web Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">Milenio3</span></span>
@@ -93,9 +95,10 @@
       </details>
     </div>
     <div class="py-5">
-      <details class="group">
+      <details class="group" [attr.open]="openIndex === 2 ? true : null">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
+          (click)="toggleIndex(2)"
         >
 		<div class="container flex justify-between items-center">
 			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Full Stack Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">BA Training School</span></span>
@@ -135,9 +138,10 @@
       </details>
     </div>
     <div class="py-5">
-      <details class="group">
+      <details class="group" [attr.open]="openIndex === 3 ? true : null">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
+          (click)="toggleIndex(3)"
         >
 		<div class="container flex justify-between items-center">
 			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Creative Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">CreativeStudio</span></span>
