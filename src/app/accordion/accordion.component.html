@@ -5,7 +5,50 @@
       <details class="group" [attr.open]="openIndex === 0 ? true : null">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
-          (click)="toggleIndex(0)"
+        >
+		  <div class="container flex justify-between items-center">
+			  <span class="text-base font-semibold text-gray-600 dark:text-gray-400">Frontend Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">FRQTAL</span></span>
+			  <span class="text-xs text-gray-600 dark:text-gray-400">09/2024 - Present</span>
+		  </div>
+          <span class="transition group-open:rotate-180">
+            <svg
+              fill="none"
+              height="24"
+              shape-rendering="geometricPrecision"
+              stroke="#8745FF"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </span>
+        </summary>
+		<div class="flex flex-wrap">
+			<p class="mt-4 text-sm text-gray-600 group-open:animate-fadeIn dark:text-gray-400">
+				I am currently in charge of <span class="text-purple-600 font-semibold">Frontend developing</span> departament, a project named 
+        Colony, creation of interface users, validations ands connections to endopints<span class="text-purple-600 font-semibold">new features</span>, as well as
+				optimization of different modules of code <span class="text-purple-600 font-semibold">support</span> for the new code and modules.
+			  </p>
+			  <div class="flex flex-col space-y-2 pt-4 group-open:animate-fadeIn">
+				  <div class="flex flex-wrap space-x-2 gap-2">
+					  <div class="py-0.5 text-xs px-3 bg-red-200 text-red-800 rounded-full">Astro</div>
+					  <div class="py-0.5 text-xs px-3 bg-yellow-200 text-yellow-800 rounded-full">JavaScript</div>
+					  <div class="py-0.5 text-xs px-3 bg-blue-200 text-blue-800 rounded-full">TypeScript</div>
+            <div class="py-0.5 text-xs px-3 bg-teal-200 text-teal-800 rounded-full">Yarn</div>
+					  <div class="py-0.5 text-xs px-3 bg-pink-200 text-pink-800 rounded-full">Css</div>
+				  </div>
+			  </div>
+		</div>
+        
+      </details>
+    </div>
+    <div class="py-5">
+      <details class="group">
+        <summary
+          class="flex justify-between items-center font-medium cursor-pointer list-none"
         >
 		  <div class="container flex justify-between items-center">
 			  <span class="text-base font-semibold text-gray-600 dark:text-gray-400">Backend Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">Grupo PROMASS</span></span>
@@ -49,10 +92,9 @@
       </details>
     </div>
     <div class="py-5">
-      <details class="group" [attr.open]="openIndex === 1 ? true : null">
+      <details class="group">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
-          (click)="toggleIndex(1)"
         >
 		<div class="container flex justify-between items-center">
 			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Web Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">Milenio3</span></span>
@@ -95,10 +137,9 @@
       </details>
     </div>
     <div class="py-5">
-      <details class="group" [attr.open]="openIndex === 2 ? true : null">
+      <details class="group">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
-          (click)="toggleIndex(2)"
         >
 		<div class="container flex justify-between items-center">
 			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Full Stack Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">BA Training School</span></span>
@@ -138,10 +179,9 @@
       </details>
     </div>
     <div class="py-5">
-      <details class="group" [attr.open]="openIndex === 3 ? true : null">
+      <details class="group">
         <summary
           class="flex justify-between items-center font-medium cursor-pointer list-none"
-          (click)="toggleIndex(3)"
         >
 		<div class="container flex justify-between items-center">
 			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Creative Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">CreativeStudio</span></span>
