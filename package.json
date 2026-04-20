@@ -11,16 +11,17 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^17.3.12",
-    "@angular/common": "^17.3.0",
-    "@angular/compiler": "^17.3.0",
-    "@angular/core": "^17.3.0",
-    "@angular/forms": "^17.3.0",
-    "@angular/platform-browser": "^17.3.0",
-    "@angular/platform-browser-dynamic": "^17.3.0",
-    "@angular/platform-server": "^17.3.0",
-    "@angular/router": "^17.3.0",
-    "@angular/ssr": "^17.3.0",
+    "@angular/animations": "^19.2.21",
+    "@angular/common": "^19.2.21",
+    "@angular/compiler": "^19.2.21",
+    "@angular/core": "^19.2.21",
+    "@angular/forms": "^19.2.21",
+    "@angular/platform-browser": "^19.2.21",
+    "@angular/platform-browser-dynamic": "^19.2.21",
+    "@angular/platform-server": "^19.2.21",
+    "@angular/router": "^19.2.21",
+    "@angular/ssr": "^19.2.21",
+    "@emailjs/browser": "^4.4.1",
     "@lottiefiles/lottie-player": "^2.0.4",
     "autoprefixer": "^10.4.19",
     "express": "^4.18.2",
@@ -30,12 +31,12 @@
     "rxjs": "~7.8.0",
     "tailwindcss": "^3.4.6",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "^0.15.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.0",
-    "@angular/cli": "^17.3.0",
-    "@angular/compiler-cli": "^17.3.0",
+    "@angular-devkit/build-angular": "^19.2.24",
+    "@angular/cli": "^19.2.24",
+    "@angular/compiler-cli": "^19.2.21",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
@@ -47,6 +48,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.2"
+    "typescript": "5.8.3"
   }
 }
