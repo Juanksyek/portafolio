@@ -36,8 +36,10 @@ export function selected(event: Event): void {
     const newL = document.getElementById("list");
     const arrowSVG = document.getElementById("ArrowSVG");
   
-    if (newL && arrowSVG) {
+    if (newL) {
       newL.classList.toggle("hidden");
+    }
+    if (arrowSVG) {
       arrowSVG.classList.toggle("rotate-180");
     }
   }
@@ -50,10 +52,16 @@ export function selected(event: Event): void {
     const arrowSVG = document.getElementById("ArrowSVG");
     const s1 = document.getElementById("s1");
   
-    if (newL && newText && arrowSVG && s1) {
+    if (newL) {
       newL.classList.add("hidden");
+    }
+    if (arrowSVG) {
       arrowSVG.classList.toggle("rotate-180");
+    }
+    if (newText) {
       newText.innerText = text;
+    }
+    if (s1) {
       s1.classList.remove("hidden");
     }
-  } 
+  }
