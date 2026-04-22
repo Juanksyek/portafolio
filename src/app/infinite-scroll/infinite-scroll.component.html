@@ -1,13 +1,21 @@
 <div class="infinite-scroll-container overflow-hidden relative max-md:w-80">
   <div class="scroll-content flex flex-col gap-4 justify-center items-center w-full h-full">
-    <div class="tag-list flex flex-col gap-4">
-      <div class="loop-slider" *ngFor="let row of rows; let i = index">
-        <div class="inner">
-          <span *ngFor="let tag of shuffleTags()" class="tag text-sm text-gray-600 bg-white shadow-lg rounded-lg dark:text-gray-400 dark:bg-gray-800">
-            <span class="hash">{{hash}}</span> {{tag}}
-          </span>
+    <div class="tag-list w-full">
+      <div class="loop-slider" *ngFor="let row of rows; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
+        <!-- inner track: contains two identical groups so the animation loops seamlessly -->
+        <div class="inner" [style.--duration]="durations[i]">
+          <div class="group">
+            <span *ngFor="let tag of rowTagSets[i]" class="tag text-sm text-gray-600 bg-white shadow-lg rounded-lg dark:text-gray-400 dark:bg-gray-800">
+              <span class="hash">{{hash}}</span> {{tag}}
+            </span>
+          </div>
+          <div class="group" aria-hidden="true">
+            <span *ngFor="let tag of rowTagSets[i]" class="tag text-sm text-gray-600 bg-white shadow-lg rounded-lg dark:text-gray-400 dark:bg-gray-800">
+              <span class="hash">{{hash}}</span> {{tag}}
+            </span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>  
+</div>
