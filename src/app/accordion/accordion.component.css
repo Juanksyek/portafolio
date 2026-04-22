@@ -12,6 +12,35 @@
   }
 }
 
+/* Accordion modern card styles */
+.accordion-card {
+  @apply bg-white dark:bg-gray-700 border border-gray-100 dark:border-gray-600 rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300;
+}
+
+.accordion-summary {
+  @apply flex items-center justify-between gap-4 cursor-pointer list-none;
+}
+
+.company-logo {
+  @apply flex items-center justify-center w-12 h-12 rounded-lg bg-purple-50 dark:bg-gray-800 flex-shrink-0;
+}
+
+.accordion-body {
+  @apply pt-3;
+}
+
+.tech-pill {
+  @apply inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700;
+}
+
+.chev svg {
+  @apply w-5 h-5 text-gray-500 dark:text-gray-300;
+}
+
+.accordion-card details[open] {
+  @apply bg-purple-50 dark:bg-gray-800;
+}
+
 details[open] p {
   animation: fadeIn 0.5s ease-in-out;
 }
