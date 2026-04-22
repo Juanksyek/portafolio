@@ -1,248 +1,288 @@
 <!-- src/app/components/projects/projects.component.html -->
-<section class="containermx-auto p-12 bg-white shadow-xl rounded-lg dark:bg-gray-800 transition-colors">
-    <!-- component -->
-<div class="flex flex-col md:mb-0 pt-16">
-  <h2 class="mb-4 text-2xl font-bold w-max text-gray-600 dark:text-gray-400">Some Projects I've Built</h2>
-  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">These are my personal projects, since for privacy reasons I cannot show the projects for the companies I worked or currently work for.</p>
+<section class="container mx-auto p-8 bg-white shadow-xl rounded-2xl dark:bg-gray-800 transition-colors">
+  <div class="flex flex-col pt-16">
+    <h2 class="mb-2 text-3xl font-extrabold text-gray-800 dark:text-white">Some Projects I've Built</h2>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">Personal projects — company work is under NDA.</p>
 
-  <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="https://github.com/Juanksyek/BA-training">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
+    <!-- Project cards grid -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+      <!-- Card template: BA Training -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <a href="https://github.com/Juanksyek/BA-training" target="_blank" rel="noopener" aria-label="GitHub repo" class="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors">
+            <svg width="18" height="18" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.33 19V17.14C14.36 16.83 14.32 16.52 14.21 16.22C14.1 15.93 13.93 15.67 13.71 15.44C15.8 15.22 18 14.44 18 10.9C18 9.99 17.64 9.12 17 8.46C17.3 7.67 17.28 6.8 16.94 6.02C16.94 6.02 16.15 5.79 14.33 6.98C12.81 6.57 11.19 6.57 9.67 6.98C7.85 5.79 7.06 6.02 7.06 6.02C6.72 6.8 6.7 7.67 7 8.46C6.35 9.13 6 10.01 6 10.92C6 14.44 8.2 15.21 10.29 15.46C10.07 15.68 9.9 15.95 9.8 16.23C9.69 16.52 9.64 16.83 9.67 17.14V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.67 17.7C7.67 18.33 6 17.7 5 15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">BA Training</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Gestor system for an English school with user and component management.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">Angular</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Node.js</span>
+        </div>
       </div>
 
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">BA Training</h2>
-        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Gestor system for an English School, whit users and manage components.</p>
+      <!-- Python QR Code -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <a href="https://github.com/Juanksyek/Python-QRcode" target="_blank" rel="noopener" aria-label="GitHub repo" class="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors">
+            <svg width="18" height="18" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.33 19V17.14C14.36 16.83 14.32 16.52 14.21 16.22C14.1 15.93 13.93 15.67 13.71 15.44C15.8 15.22 18 14.44 18 10.9C18 9.99 17.64 9.12 17 8.46C17.3 7.67 17.28 6.8 16.94 6.02C16.94 6.02 16.15 5.79 14.33 6.98C12.81 6.57 11.19 6.57 9.67 6.98C7.85 5.79 7.06 6.02 7.06 6.02C6.72 6.8 6.7 7.67 7 8.46C6.35 9.13 6 10.01 6 10.92C6 14.44 8.2 15.21 10.29 15.46C10.07 15.68 9.9 15.95 9.8 16.23C9.69 16.52 9.64 16.83 9.67 17.14V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.67 17.7C7.67 18.33 6 17.7 5 15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">Python QR Code</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">QR code generator with camera access and custom QR styles.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">OpenCV</span>
+        </div>
       </div>
+
+      <!-- CRUD Nest.js Backend -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <a href="https://github.com/Juanksyek/crud-backend-nestjs" target="_blank" rel="noopener" aria-label="GitHub repo" class="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors">
+            <svg width="18" height="18" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.33 19V17.14C14.36 16.83 14.32 16.52 14.21 16.22C14.1 15.93 13.93 15.67 13.71 15.44C15.8 15.22 18 14.44 18 10.9C18 9.99 17.64 9.12 17 8.46C17.3 7.67 17.28 6.8 16.94 6.02C16.94 6.02 16.15 5.79 14.33 6.98C12.81 6.57 11.19 6.57 9.67 6.98C7.85 5.79 7.06 6.02 7.06 6.02C6.72 6.8 6.7 7.67 7 8.46C6.35 9.13 6 10.01 6 10.92C6 14.44 8.2 15.21 10.29 15.46C10.07 15.68 9.9 15.95 9.8 16.23C9.69 16.52 9.64 16.83 9.67 17.14V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.67 17.7C7.67 18.33 6 17.7 5 15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">CRUD Nest.js</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">REST API with Nest.js, TypeScript and JWT authentication.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">Nest.js</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">JWT</span>
+        </div>
+      </div>
+
+      <!-- Notion App -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="text-gray-300 dark:text-gray-600 text-xs italic">private</span>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">Notion App</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Connects templates and updates Notion DBs programmatically via API.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Notion API</span>
+        </div>
+      </div>
+
+      <!-- Aritmetic Socket -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <a href="https://github.com/Juanksyek/notion-movies-app-backend" target="_blank" rel="noopener" aria-label="GitHub repo" class="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors">
+            <svg width="18" height="18" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.33 19V17.14C14.36 16.83 14.32 16.52 14.21 16.22C14.1 15.93 13.93 15.67 13.71 15.44C15.8 15.22 18 14.44 18 10.9C18 9.99 17.64 9.12 17 8.46C17.3 7.67 17.28 6.8 16.94 6.02C16.94 6.02 16.15 5.79 14.33 6.98C12.81 6.57 11.19 6.57 9.67 6.98C7.85 5.79 7.06 6.02 7.06 6.02C6.72 6.8 6.7 7.67 7 8.46C6.35 9.13 6 10.01 6 10.92C6 14.44 8.2 15.21 10.29 15.46C10.07 15.68 9.9 15.95 9.8 16.23C9.69 16.52 9.64 16.83 9.67 17.14V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.67 17.7C7.67 18.33 6 17.7 5 15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">Aritmetic Socket</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Online calculator over a private Python socket server.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">WebSockets</span>
+        </div>
+      </div>
+
+      <!-- WebSockets / AWS Chat -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <a href="https://github.com/Juanksyek/Aricmetic-Socket" target="_blank" rel="noopener" aria-label="GitHub repo" class="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors">
+            <svg width="18" height="18" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.33 19V17.14C14.36 16.83 14.32 16.52 14.21 16.22C14.1 15.93 13.93 15.67 13.71 15.44C15.8 15.22 18 14.44 18 10.9C18 9.99 17.64 9.12 17 8.46C17.3 7.67 17.28 6.8 16.94 6.02C16.94 6.02 16.15 5.79 14.33 6.98C12.81 6.57 11.19 6.57 9.67 6.98C7.85 5.79 7.06 6.02 7.06 6.02C6.72 6.8 6.7 7.67 7 8.46C6.35 9.13 6 10.01 6 10.92C6 14.44 8.2 15.21 10.29 15.46C10.07 15.68 9.9 15.95 9.8 16.23C9.69 16.52 9.64 16.83 9.67 17.14V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.67 17.7C7.67 18.33 6 17.7 5 15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">WebSockets Chat</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Serverless real-time chat using AWS Lambda and DynamoDB.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">AWS Lambda</span>
+          <span class="tech-badge">DynamoDB</span>
+          <span class="tech-badge">WS</span>
+        </div>
+      </div>
+
+      <!-- CRUD Frontend -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <a href="https://github.com/Juanksyek/crud-frontend-nestjs" target="_blank" rel="noopener" aria-label="GitHub repo" class="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors">
+            <svg width="18" height="18" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.33 19V17.14C14.36 16.83 14.32 16.52 14.21 16.22C14.1 15.93 13.93 15.67 13.71 15.44C15.8 15.22 18 14.44 18 10.9C18 9.99 17.64 9.12 17 8.46C17.3 7.67 17.28 6.8 16.94 6.02C16.94 6.02 16.15 5.79 14.33 6.98C12.81 6.57 11.19 6.57 9.67 6.98C7.85 5.79 7.06 6.02 7.06 6.02C6.72 6.8 6.7 7.67 7 8.46C6.35 9.13 6 10.01 6 10.92C6 14.44 8.2 15.21 10.29 15.46C10.07 15.68 9.9 15.95 9.8 16.23C9.69 16.52 9.64 16.83 9.67 17.14V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.67 17.7C7.67 18.33 6 17.7 5 15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">CRUD Nest.js Frontend</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Angular + Tailwind frontend for the Nest.js CRUD project.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">Angular</span>
+          <span class="tech-badge">Tailwind</span>
+        </div>
+      </div>
+
+      <!-- Recognize Objects -->
+      <div class="project-card group">
+        <div class="flex items-start justify-between mb-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24" fill="none"><path d="M2 11V4.6C2 4.27 2.27 4 2.6 4H8.78C8.92 4 9.06 4.05 9.17 4.14L12.33 6.86C12.44 6.95 12.58 7 12.72 7H21.4C21.73 7 22 7.27 22 7.6V11M2 11V19.4C2 19.73 2.27 20 2.6 20H21.4C21.73 20 22 19.73 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="text-gray-300 dark:text-gray-600 text-xs italic">private</span>
+        </div>
+        <h3 class="font-bold text-gray-800 dark:text-white mb-1">Recognize Objects</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Object recognition model using p5.js and ML in the browser.</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="tech-badge">p5.js</span>
+          <span class="tech-badge">ML5</span>
+          <span class="tech-badge">HTML</span>
+        </div>
+      </div>
+
     </div>
 
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="https://github.com/Juanksyek/Python-QRcode">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <!-- Featured pages -->
+    <h2 class="mt-14 mb-2 text-3xl font-extrabold text-gray-800 dark:text-white">Pages I've Built & Contributed</h2>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">Live productions I've been part of.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- LitFinance -->
+      <div class="featured-card group">
+        <div class="mb-4">
+          <div class="img-wrap">
+            <img src="assets/images/litfinance.png" alt="LitFinance — screenshot" class="featured-image" role="button" tabindex="0"
+              (click)="openLightbox('assets/images/litfinance.png')" (keyup.enter)="openLightbox('assets/images/litfinance.png')"/>
+          </div>
+          <h5 class="text-lg font-bold text-gray-800 dark:text-white mb-2">LitFinance</h5>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Mobile App and web landing page.</p>
+        </div>
+        <a href="https://thelitfinance.com/" target="_blank" rel="noopener"
+          class="view-link">
+          View page
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
           </svg>
         </a>
       </div>
 
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">Python QR Code</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Pure python QR code generator, acces to cam and create styles of QR´s</p>
+      <!-- Colony -->
+      <div class="featured-card group">
+        <div class="mb-4">
+          <div class="img-wrap">
+            <div class="img-placeholder">Imagen próximamente</div>
+          </div>
+          <h5 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Colonny by FRQTAL</h5>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Frontend collaborator — modules, components, designs and adaptive implementations.</p>
+        </div>
+        <a href="https://colonny.xyz/" target="_blank" rel="noopener"
+          class="view-link">
+          View page
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+          </svg>
+        </a>
       </div>
+
+      <!-- Liverpool -->
+      <div class="featured-card group">
+        <div class="mb-4">
+          <div class="img-wrap">
+            <div class="img-placeholder">Imagen próximamente</div>
+          </div>
+          <h5 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Liverpool</h5>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Backend collaboration and occasional frontend work for a major retail platform.</p>
+        </div>
+        <a href="https://www.csmp.gpmass.com/admin" target="_blank" rel="noopener"
+          class="view-link">
+          View page
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- FMRU -->
+      <div class="featured-card group">
+        <div class="mb-4">
+          <div class="img-wrap">
+            <img src="assets/images/fmru.png" alt="Rugby México — screenshot" class="featured-image" role="button" tabindex="0"
+              (click)="openLightbox('assets/images/fmru.png')" (keyup.enter)="openLightbox('assets/images/fmru.png')"/>
+          </div>
+          <h5 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Rugby México</h5>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Team and player management platform for Rugby México.</p>
+        </div>
+        <a href="https://mexrugby.com/registro/" target="_blank" rel="noopener"
+          class="view-link">
+          View page
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Grupo Ensamble -->
+      <div class="featured-card group">
+        <div class="mb-4">
+          <div class="img-wrap">
+            <img src="assets/images/ensamble.png" alt="Grupo Ensamble — screenshot" class="featured-image" role="button" tabindex="0"
+              (click)="openLightbox('assets/images/ensamble.png')" (keyup.enter)="openLightbox('assets/images/ensamble.png')"/>
+          </div>
+          <h5 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Grupo Ensamble</h5>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Multi-foundation page with innovative and conservative design — one of my most challenging creative projects.</p>
+        </div>
+        <a href="https://www.ensamblemexico.org/temporal/index.html" target="_blank" rel="noopener"
+          class="view-link">
+          View page
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Grupo Tabula (replaced SVG with interactive image + lightbox) -->
+      <div class="featured-card group">
+        <div class="mb-4">
+          <div class="img-wrap">
+            <img src="assets/images/tabula.png" alt="Grupo Tabula — screenshot" class="featured-image" role="button" tabindex="0"
+              (click)="openLightbox('assets/images/tabula.png')" (keyup.enter)="openLightbox('assets/images/tabula.png')"/>
+          </div>
+          <h5 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Grupo Tabula</h5>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Costs center and platform for SPEI transactions.</p>
+        </div>
+        <a href="https://www.grupotabula.com/" target="_blank" rel="noopener"
+          class="view-link">
+          View page
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
     </div>
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="https://github.com/Juanksyek/crud-backend-nestjs">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
 
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">CRUD Nest.js</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">This app was made whit Nest.js, using TypeScript and JWT for autentication.</p>
-      </div>
-    </div>
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">Notion App</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">The Notion app is a project to connect templates and update DB´s to add new items whithout using Notion</p>
-      </div>
-    </div>
-
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="https://github.com/Juanksyek/notion-movies-app-backend">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">Aritmetic Socket</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">It allows make a operations like a calculator online but in your private server of python.</p>
-      </div>
-
-    </div>
-
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="https://github.com/Juanksyek/Aricmetic-Socket">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">WebSockets</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Web Chat whit serverless, AWS Lambda and DynamoDB, this is a chat in real time.</p>
-      </div>
-    </div>
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="https://github.com/Juanksyek/WebSockets">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">CRUD Nest.js Frontend</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Made whit Angular and Tailwind, this is a visual part for the entire project.</p>
-      </div>
-    </div>
-    <div class="flex items-start rounded-xl bg-white p-4 shadow-lg dark:bg-gray-800 transition-colors">
-      <div class="flex-wrap h-12 w-14 items-center justify-center">
-        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#8745FF">
-          <path d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <a href="https://github.com/Juanksyek/crud-frontend-nestjs">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#707070">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#707070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-
-      <div class="ml-4">
-        <h2 class="font-semibold text-gray-600 dark:text-gray-400">Recognize Objects</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">This is a recognize object model whit p5.js and basic view in html.</p>
-      </div>
+    <!-- Infinite scroll tech showcase -->
+    <div class="mt-14 rounded-2xl bg-gray-50 dark:bg-gray-700 p-6 shadow-inner">
+      <app-infinite-scroll></app-infinite-scroll>
     </div>
   </div>
-  <h2 class="mb-4 pt-10 text-2xl font-bold w-max text-gray-600 dark:text-gray-400">Some Pages I've Built and Participate</h2>
-  <div class="containermx flex flex-row gap-6 py-6 bg-white rounded-lg dark:bg-gray-800 transition-colors max-w-4xl">
-    <div class="relative flex w-96 flex-col bg-white rounded-lg mt-10 dark:bg-gray-800 transition-colors shadow-xl">
-      <div class="p-6">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="mb-4 h-12 w-12 text-purple-600">
-          <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path>
-          <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"></path>
-        </svg>
-        <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-600 dark:text-gray-400">
-          Colony by FRQTAL
-        </h5>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          Project that I currently enjoy very much, I am as a collaborator and in charge of the frontend area, analyzing modules and components, designs and implementations useful and adaptive to the project.
-        </p>
-      </div>
-      <div class="p-6 pt-0">
-        <a class="!font-medium !text-blue-gray-900 !transition-colors hover:!text-purple-600" href="https://colonny.xyz/">
-          <button class="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-purple-600 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button" data-ripple-dark="true">
-            View page
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-            </svg>
-          </button>
-        </a>
+    <!-- Lightbox overlay (opened when user clicks a featured image) -->
+    <div *ngIf="lightboxOpen" class="lightbox-overlay" (click)="closeLightbox()">
+      <div class="lightbox" (click)="$event.stopPropagation()">
+        <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close image">✕</button>
+        <img [src]="lightboxSrc" alt="Preview" />
       </div>
     </div>
-
-    <div class="relative flex w-96 flex-col bg-white rounded-lg mt-10 dark:bg-gray-800 transition-colors shadow-xl">
-      <div class="p-6">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="mb-4 h-12 w-12 text-purple-600">
-          <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path>
-          <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"></path>
-        </svg>
-        <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-600 dark:text-gray-400">
-          Liverpool
-        </h5>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          In this site I'm collaborating in functional aspects in backend and some visual aspects in frontend, although this last one is not very continuous, since it's not very common.
-        </p>
-      </div>
-      <div class="p-6 pt-0">
-        <a class="!font-medium !text-blue-gray-900 !transition-colors hover:!text-purple-600" href="https://www.csmp.gpmass.com/admin">
-          <button class="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-purple-600 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button" data-ripple-dark="true">
-            View page
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-            </svg>
-          </button>
-        </a>
-      </div>
-    </div>
-
-    <div class="relative flex w-96 flex-col bg-white rounded-lg mt-10 dark:bg-gray-800 transition-colors shadow-xl">
-      <div class="p-6">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="mb-4 h-12 w-12 text-purple-600">
-          <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path>
-          <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"></path>
-        </svg>
-        <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-600 dark:text-gray-400">
-          Grupo Ensamble
-        </h5>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          Page associated with multiple foundations, with innovative and conservative design to its characteristics. One of the first pages in which I collaborated and one of the most challenging for creative design.
-        </p>
-      </div>
-      <div class="p-6 pt-0">
-        <a class="!font-medium !text-blue-gray-900 !transition-colors hover:!text-purple-600" href="https://www.ensamblemexico.org/temporal/index.html ">
-          <button class="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-purple-600 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button" data-ripple-dark="true">
-            View page
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-            </svg>
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="containermx py-6 bg-white shadow-xl rounded-lg mt-10 dark:bg-gray-800 transition-colors">
-    <app-infinite-scroll></app-infinite-scroll>
-  </div>
-</div>
 </section>
-  
