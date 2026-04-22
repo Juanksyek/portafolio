@@ -1,222 +1,169 @@
 <!-- component -->
-<div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen dark:bg-gray-800 transition-colors">
-  <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
-    <div class="py-5">
-      <details class="group" [attr.open]="openIndex === 0 ? true : null">
-        <summary
-          class="flex justify-between items-center font-medium cursor-pointer list-none"
-        >
-		  <div class="container flex justify-between items-center">
-			  <span class="text-base font-semibold text-gray-600 dark:text-gray-400">Frontend Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">FRQTAL</span></span>
-			  <span class="text-xs text-gray-600 dark:text-gray-400">09/2024 - Present</span>
-		  </div>
-          <span class="transition group-open:rotate-180">
-            <svg
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="#8745FF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="24"
-            >
-              <path d="M6 9l6 6 6-6"></path>
+<div class="max-w-screen-xl mx-auto px-5 bg-white dark:bg-gray-800 transition-colors">
+  <div class="grid gap-4 max-w-xl mx-auto mt-8">
+
+    <details class="group accordion-card" [attr.open]="openIndex === 0 ? true : null">
+      <summary class="accordion-summary">
+        <div class="flex items-center gap-4">
+          <div class="company-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M12 3v4M5 21h14a2 2 0 002-2V9H3v10a2 2 0 002 2z" />
             </svg>
-          </span>
-        </summary>
-		<div class="flex flex-wrap">
-			<p class="mt-4 text-sm text-gray-600 group-open:animate-fadeIn dark:text-gray-400">
-				I am currently in charge of <span class="text-purple-600 font-semibold">Frontend developing</span> departament, a project named 
-        Colony, creation of interface users, validations ands connections to endopints <span class="text-purple-600 font-semibold">new features</span>, as well as
-				optimization of different modules of code <span class="text-purple-600 font-semibold">support</span> for the new code and modules.
-			  </p>
-			  <div class="flex flex-col space-y-2 pt-4 group-open:animate-fadeIn">
-				  <div class="flex flex-wrap space-x-2 gap-2">
-					  <div class="py-0.5 text-xs px-3 bg-red-200 text-red-800 rounded-full">Astro</div>
-					  <div class="py-0.5 text-xs px-3 bg-yellow-200 text-yellow-800 rounded-full">JavaScript</div>
-					  <div class="py-0.5 text-xs px-3 bg-blue-200 text-blue-800 rounded-full">TypeScript</div>
-            <div class="py-0.5 text-xs px-3 bg-teal-200 text-teal-800 rounded-full">Yarn</div>
-					  <div class="py-0.5 text-xs px-3 bg-pink-200 text-pink-800 rounded-full">Css</div>
-				  </div>
-			  </div>
-		</div>
-        
-      </details>
-    </div>
-    <div class="py-5">
-      <details class="group">
-        <summary
-          class="flex justify-between items-center font-medium cursor-pointer list-none"
-        >
-		  <div class="container flex justify-between items-center">
-			  <span class="text-base font-semibold text-gray-600 dark:text-gray-400">Backend Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">Grupo PROMASS</span></span>
-			  <span class="text-xs text-gray-600 dark:text-gray-400">05/2024 - Present</span>
-		  </div>
-          <span class="transition group-open:rotate-180">
-            <svg
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="#8745FF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="24"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </span>
-        </summary>
-		<div class="flex flex-wrap">
-			<p class="mt-4 text-sm text-gray-600 group-open:animate-fadeIn dark:text-gray-400">
-				I am currently in charge of <span class="text-purple-600 font-semibold">developing</span> new logical modules for a
-				marketplace system, project adjustments and <span class="text-purple-600 font-semibold">migrations</span>, as well as
-				endpoint management and technical <span class="text-purple-600 font-semibold">support</span> for the developed systems.
-				Also in the <span class="text-purple-600 font-semibold">dockerization</span> of projects and development environments.
-			  </p>
-			  <div class="flex flex-col space-y-2 pt-4 group-open:animate-fadeIn">
-				  <div class="flex flex-wrap space-x-2 gap-2">
-					  <div class="py-0.5 text-xs px-3 bg-red-200 text-red-800 rounded-full">Nest.js</div>
-					  <div class="py-0.5 text-xs px-3 bg-orange-200 text-orange-800 rounded-full">Angular.js</div>
-					  <div class="py-0.5 text-xs px-3 bg-yellow-200 text-yellow-800 rounded-full">JavaScript</div>
-					  <div class="py-0.5 text-xs px-3 bg-blue-200 text-blue-800 rounded-full">TypeScript</div>
-					  <div class="py-0.5 text-xs px-3 bg-purple-200 text-purple-800 rounded-full">SQL Server</div>
-					  <div class="py-0.5 text-xs px-3 bg-pink-200 text-pink-800 rounded-full">Npm</div>
-				  </div>
-			  </div>
-		</div>
-        
-      </details>
-    </div>
-    <div class="py-5">
-      <details class="group">
-        <summary
-          class="flex justify-between items-center font-medium cursor-pointer list-none"
-        >
-		<div class="container flex justify-between items-center">
-			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Web Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">Milenio3</span></span>
-			<span class="text-xs text-gray-600 dark:text-gray-400">03/2023 - 04/2024</span>
-		</div>
-          <span class="transition group-open:rotate-180">
-            <svg
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="#8745FF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="24"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </span>
-        </summary>
-        <p class="mt-4 text-sm text-gray-600 group-open:animate-fadeIn dark:text-gray-400">
-          In this company i <span class="text-purple-600 font-semibold">updated</span> existing websites with new innovative
-          designs, working closely with the <span class="text-purple-600 font-semibold">design team</span>, introduction of <span class="text-purple-600 font-semibold">APIS</span> in
-          simple projects, as well as <span class="text-purple-600 font-semibold">authentications</span> and newsletter
-          registrations. <span class="text-purple-600 font-semibold">Responsible</span> for creating dynamic components and user
-          experiences also web site <span class="text-purple-600 font-semibold">administration</span> and web hosting.
-        </p>
-		<div class="flex flex-col space-y-2 pt-4 group-open:animate-fadeIn">
-			<div class="flex flex-wrap space-x-2 gap-2">
-				<div class="py-0.5 text-xs px-3 bg-gray-200 text-gray-800 rounded-full">AWS</div>
-				<div class="py-0.5 text-xs px-3 bg-red-200 text-red-800 rounded-full">Bootstrap</div>
-				<div class="py-0.5 text-xs px-3 bg-orange-200 text-orange-800 rounded-full">MySQL</div>
-				<div class="py-0.5 text-xs px-3 bg-green-200 text-green-800 rounded-full">Node.js</div>
-				<div class="py-0.5 text-xs px-3 bg-teal-200 text-teal-800 rounded-full">MongoDB</div>
-				<div class="py-0.5 text-xs px-3 bg-blue-200 text-blue-800 rounded-full">React.js</div>
-				<div class="py-0.5 text-xs px-3 bg-indigo-200 text-indigo-800 rounded-full">JQuery</div>
-			</div>
-		</div>
-      </details>
-    </div>
-    <div class="py-5">
-      <details class="group">
-        <summary
-          class="flex justify-between items-center font-medium cursor-pointer list-none"
-        >
-		<div class="container flex justify-between items-center">
-			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Full Stack Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">BA Training School</span></span>
-			<span class="text-xs text-gray-600 dark:text-gray-400">06/2023 - 01/2024</span>
-		</div>
-          <span class="transition group-open:rotate-180">
-            <svg
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="#8745FF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="24"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </span>
-        </summary>
-        <p class="mt-4 text-sm text-gray-600 group-open:animate-fadeIn dark:text-gray-400">
-          Collaborate in the <span class="text-purple-600 font-semibold">implementation</span> of the informative <span class="text-purple-600 font-semibold">blog</span> and the
-          general design of the app and participate in <span class="text-purple-600 font-semibold">database and security</span>
-          tuning, creating a <span class="text-purple-600 font-semibold">secure</span> system environment.
-        </p>
-        <div class="flex flex-col space-y-2 pt-4 group-open:animate-fadeIn">
-          <div class="flex flex-wrap space-x-2 gap-2">
-            <div class="py-0.5 text-xs px-3 bg-gray-200 text-gray-800 rounded-full">MySQL</div>
-            <div class="py-0.5 text-xs px-3 bg-red-200 text-red-800 rounded-full">EJS</div>
-            <div class="py-0.5 text-xs px-3 bg-orange-200 text-orange-800 rounded-full">HTML</div>
-            <div class="py-0.5 text-xs px-3 bg-yellow-200 text-yellow-800 rounded-full">JavaScript</div>
-            <div class="py-0.5 text-xs px-3 bg-green-200 text-green-800 rounded-full">Node.js</div>
-            <div class="py-0.5 text-xs px-3 bg-blue-200 text-blue-800 rounded-full">CSS</div>
           </div>
-		    </div>
-      </details>
-    </div>
-    <div class="py-5">
-      <details class="group">
-        <summary
-          class="flex justify-between items-center font-medium cursor-pointer list-none"
-        >
-		<div class="container flex justify-between items-center">
-			<span class="text-base font-semibold text-gray-600 dark:text-gray-400">Creative Developer in <span class="text-purple-600 font-semibold dark:text-gray-400">CreativeStudio</span></span>
-			<span class="text-xs text-gray-600 dark:text-gray-400">02/2018 - 03/2020</span>
-		</div>
-          <span class="transition group-open:rotate-180">
-            <svg
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="#8745FF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="24"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
+          <div class="flex flex-col">
+            <div class="text-base font-semibold text-gray-800 dark:text-gray-200">Project Lead & Fullstack Developer <span class="text-purple-600 font-semibold">Suido</span></div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Architecting scalable web platforms</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-xs text-gray-600 dark:text-gray-400">01/2025 - Present</span>
+          <span class="chev transition-transform group-open:rotate-180">
+            <svg fill="none" viewBox="0 0 24 24" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
           </span>
-        </summary>
-        <p class="mt-4 text-sm text-gray-600 group-open:animate-fadeIn dark:text-gray-400">
-          I created static web pages using <span class="text-purple-600 font-semibold">HTML</span>, <span class="text-purple-600 font-semibold">CSS</span> and <span class="text-purple-600 font-semibold">JavaScript</span>, for
-          <span class="text-purple-600 font-semibold">business clients</span> and <span class="text-purple-600 font-semibold">informational sites</span>, meeting the expectations of
-          my superiors.
-        </p>
-		<div class="flex flex-col space-y-2 pt-4 group-open:animate-fadeIn">
-			<div class="flex flex-wrap space-x-2 gap-2">
-				<div class="py-0.5 text-xs px-3 bg-orange-200 text-orange-800 rounded-full">HTML</div>
-				<div class="py-0.5 text-xs px-3 bg-yellow-200 text-yellow-800 rounded-full">JavaScript</div>
-				<div class="py-0.5 text-xs px-3 bg-green-200 text-green-800 rounded-full">Node.js</div>
-				<div class="py-0.5 text-xs px-3 bg-blue-200 text-blue-800 rounded-full">CSS</div>
-			</div>
-		</div>
-      </details>
-    </div>
+        </div>
+      </summary>
+      <div class="accordion-body">
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 group-open:animate-fadeIn">I contribute to <span class="text-purple-600 font-semibold">high-impact software projects</span> across sports management, financial platforms and internal operational tools. I lead feature development, performance tuning and long-term maintainability.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tech-pill"><svg class="w-3 h-3 text-red-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 5h4l-3 4 2 6-5-3-5 3 2-6-3-4h4z"/></svg>NestJS</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>TypeScript</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-blue-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7v7a7 7 0 007 7 7 7 0 007-7V9a7 7 0 00-7-7z"/></svg>MySQL</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-teal-500" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="3" rx="1"/><rect x="4" y="10" width="16" height="3" rx="1"/><rect x="4" y="16" width="16" height="3" rx="1"/></svg>Redis</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="group accordion-card">
+      <summary class="accordion-summary">
+        <div class="flex items-center gap-4">
+          <div class="company-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M12 3v4M5 21h14a2 2 0 002-2V9H3v10a2 2 0 002 2z" /></svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-base font-semibold text-gray-800 dark:text-gray-200">Frontend Developer in <span class="text-purple-600 font-semibold">FRQTAL</span></div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">UI modules and adaptive implementations</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-xs text-gray-600 dark:text-gray-400">09/2024 - 03/2025</span>
+          <span class="chev transition-transform group-open:rotate-180"><svg fill="none" viewBox="0 0 24 24" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </div>
+      </summary>
+      <div class="accordion-body">
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 group-open:animate-fadeIn">In charge of frontend development for Colony: interfaces, validations and endpoint integrations. Focus on modular, testable code and performance.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tech-pill"><svg class="w-3 h-3 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Astro</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4z"/></svg>JavaScript</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>TypeScript</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-teal-500" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="3" rx="1"/><rect x="4" y="10" width="16" height="3" rx="1"/></svg>Yarn</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="group accordion-card">
+      <summary class="accordion-summary">
+        <div class="flex items-center gap-4">
+          <div class="company-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M12 3v4M5 21h14a2 2 0 002-2V9H3v10a2 2 0 002 2z" /></svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-base font-semibold text-gray-800 dark:text-gray-200">Backend Developer in <span class="text-purple-600 font-semibold">Grupo PROMASS</span></div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">API development and system migrations</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-xs text-gray-600 dark:text-gray-400">05/2024 - Present</span>
+          <span class="chev transition-transform group-open:rotate-180"><svg fill="none" viewBox="0 0 24 24" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </div>
+      </summary>
+      <div class="accordion-body">
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 group-open:animate-fadeIn">Responsible for designing modules, endpoint management, dockerization and technical support to keep services reliable and fast.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tech-pill"><svg class="w-3 h-3 text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3z"/></svg>Nest.js</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-orange-400" viewBox="0 0 24 24" fill="currentColor"><path d="M2 2h20v20H2z"/></svg>Angular.js</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2 5h-4l2-5z"/></svg>JavaScript</span>
+          <span class="tech-pill"><svg class="w-3 h-3 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>TypeScript</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="group accordion-card">
+      <summary class="accordion-summary">
+        <div class="flex items-center gap-4">
+          <div class="company-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M12 3v4M5 21h14a2 2 0 002-2V9H3v10a2 2 0 002 2z" /></svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-base font-semibold text-gray-800 dark:text-gray-200">Web Developer in <span class="text-purple-600 font-semibold">Milenio3</span></div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">03/2023 - 04/2024</div>
+          </div>
+        </div>
+        <div class="chev transition-transform group-open:rotate-180"><svg fill="none" viewBox="0 0 24 24" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></div>
+      </summary>
+      <div class="accordion-body">
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Updated websites with new designs, worked with design teams and implemented simple APIs, auth and newsletters.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tech-pill">AWS</span>
+          <span class="tech-pill">Bootstrap</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">Node.js</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="group accordion-card">
+      <summary class="accordion-summary">
+        <div class="flex items-center gap-4">
+          <div class="company-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M12 3v4M5 21h14a2 2 0 002-2V9H3v10a2 2 0 002 2z" /></svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-base font-semibold text-gray-800 dark:text-gray-200">Full Stack Developer in <span class="text-purple-600 font-semibold">BA Training School</span></div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">06/2023 - 01/2024</div>
+          </div>
+        </div>
+        <div class="chev transition-transform group-open:rotate-180"><svg fill="none" viewBox="0 0 24 24" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></div>
+      </summary>
+      <div class="accordion-body">
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Collaborated in blog implementation and app design, participated in database and security tuning.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">EJS</span>
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">JavaScript</span>
+        </div>
+      </div>
+    </details>
+
+    <!-- Restored: CreativeStudio entry (02/2018 - 03/2020) -->
+    <details class="group accordion-card">
+      <summary class="accordion-summary">
+        <div class="flex items-center gap-4">
+          <div class="company-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M12 3v4M5 21h14a2 2 0 002-2V9H3v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-base font-semibold text-gray-800 dark:text-gray-200">Creative Developer in <span class="text-purple-600 font-semibold">CreativeStudio</span></div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Static websites for business clients</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-xs text-gray-600 dark:text-gray-400">02/2018 - 03/2020</span>
+          <span class="chev transition-transform group-open:rotate-180"><svg fill="none" viewBox="0 0 24 24" stroke="#8745FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </div>
+      </summary>
+      <div class="accordion-body">
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 group-open:animate-fadeIn">I created static web pages using <span class="text-purple-600 font-semibold">HTML</span>, <span class="text-purple-600 font-semibold">CSS</span> and <span class="text-purple-600 font-semibold">JavaScript</span> for business and informational sites, delivering on client requirements.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">Node.js</span>
+        </div>
+      </div>
+    </details>
+
   </div>
 </div>
