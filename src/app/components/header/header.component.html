@@ -1,72 +1,72 @@
 <!-- src/app/components/header/header.component.html -->
-<header class="shadow-md fixed top-0 left-0 w-full z-10 bg-white dark:bg-gray-800 transition-colors">
-  <div class="container mx-auto flex flex-wrap justify-between items-center max-w-full">
-    <div class="2xl:container 2xl:mx-auto w-full">
-      <div class="bg-white dark:bg-gray-800 rounded shadow-lg py-5 px-7 transition-colors">
-          <nav class="flex justify-between">
-              <div class="flex items-center space-x-3 lg:pr-6 pr-6">
-                  <svg width="34" height="34" viewBox="0 0 34 34" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000" class="dark:text-white transition-colors">
-                    <path d="M13.5 6L10 18.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M6.5 8.5L3 12L6.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M17.5 8.5L21 12L17.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>                        
-                  <h2 class="font-normal text-2xl leading-6 text-gray-800 dark:text-white transition-colors">Juan Flores</h2>
-              </div>
+<header
+  class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white dark:bg-gray-900"
+  [class.scrolled-header]="scrolled"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center justify-between h-16">
 
-              <!-- For medium and plus sized devices -->
-              <ul class="hidden md:flex flex-auto space-x-5">
-                  <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 border-white rounded">
-                    <a routerLink="/" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 dark:text-white inline-block transition-colors">
-                        <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white dark:to-gray-800 from-white dark:from-gray-800"></span>
-                        <span class="relative">About me</span>
-                    </a>
-                  </li>
-                  <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 border-white rounded">
-                    <a routerLink="/projects" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 dark:text-white inline-block transition-colors">
-                        <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white dark:to-gray-800 from-white dark:from-gray-800"></span>
-                        <span class="relative">Projects</span>
-                    </a>
-                  </li>
-                  <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 border-white rounded">
-                    <a routerLink="/contact" class="px-5 py-2.5 relative rounded group font-medium text-gray-800 dark:text-white inline-block transition-colors">
-                        <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-white dark:to-gray-800 from-white dark:from-gray-800"></span>
-                        <span class="relative">Contact</span>
-                    </a>
-                  </li>
-              </ul>
-              <div class="flex space-x-5 justify-center items-center pl-2">
-                <div class="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                  <button (click)="toggleDarkMode()" class="toggle-button relative inline-flex items-center cursor-pointer" aria-label="Toggle navigation">
-                    <div class="block w-14 h-8 rounded-full border border-indigo-600 dark:border-white transition-colors"></div>
-                    <div class="dot absolute left-1 top-1 bg-indigo-600 dark:bg-white w-6 h-6 rounded-full transition-transform"></div>
-                  </button>
-                </div>
-              </div>              
-          </nav>
-          <!-- for smaller devices -->
+      <!-- Logo -->
+      <a routerLink="/" class="flex items-center gap-2 group">
+        <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-gray-800 dark:text-white group-hover:text-purple-600 transition-colors">
+          <path d="M13.5 6L10 18.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6.5 8.5L3 12L6.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.5 8.5L21 12L17.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-bold text-lg text-gray-800 dark:text-white group-hover:text-purple-600 transition-colors">Juan Flores</span>
+      </a>
 
-          <div class="block md:hidden w-full mt-5">
-            <div (click)="selectNew()" class="cursor-pointer px-4 py-3 text-white menu-color-mobile rounded flex justify-between items-center w-full">
-              <div class="flex space-x-2">
-                <span id="s1" class="font-semibold text-sm leading-3 hidden">Selected: </span>
-                <p id="textClicked" class="font-normal text-sm leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer">Menu</p>
-              </div>
-              <svg id="ArrowSVG" class="transform" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Desktop nav -->
+      <ul class="hidden md:flex items-center gap-1">
+        <li>
+          <a routerLink="/" routerLinkActive="nav-active" [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link">About me</a>
+        </li>
+        <li>
+          <a routerLink="/projects" routerLinkActive="nav-active"
+            class="nav-link">Projects</a>
+        </li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="nav-active"
+            class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Dark mode toggle + hamburger -->
+      <div class="flex items-center gap-3">
+        <button (click)="toggleDarkMode()" class="toggle-button relative inline-flex items-center cursor-pointer focus:outline-none" aria-label="Toggle dark mode" [attr.aria-pressed]="isDark">
+          <div class="relative w-10 h-6 rounded-full border transition-colors overflow-hidden" [class.border-purple-500]="!isDark" [class.border-transparent]="isDark" [class.bg-gray-100]="!isDark" [class.bg-purple-600]="isDark" [class.dark:bg-gray-700]="!isDark">
+            <div class="absolute inset-0 flex items-center justify-between px-1 pointer-events-none">
+              <svg class="w-3 h-3 text-yellow-400 opacity-95" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm7.04 2.05l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM17 13h3v-2h-3v2zM12 7a5 5 0 100 10 5 5 0 000-10zm4.24 8.16l1.8 1.79 1.79-1.79-1.79-1.8-1.8 1.8zM6.76 19.16l-1.79 1.79 1.79 1.79 1.8-1.79-1.8-1.79zM12 23h2v-3h-2v3z"/>
+              </svg>
+              <svg class="w-3 h-3 text-indigo-300 opacity-70" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
               </svg>
             </div>
-            <div class="relative">
-              <ul id="list" class="z-10 hidden font-normal text-base leading-4 absolute top-2 w-full rounded shadow-md bg-white dark:bg-gray-800 transition-colors">
-                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 dark:text-white bg-gray-50 dark:bg-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/" class="ml-4 hover:text-gray-400">About me</a></li>
-                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 dark:text-white bg-gray-50 dark:bg-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/projects" class="ml-4 hover:text-gray-400">Projects</a></li>
-                <li class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 dark:text-white bg-gray-50 dark:bg-gray-800 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"><a routerLink="/contact" class="ml-4 hover:text-gray-400">Contact</a></li>
-              </ul>
-            </div>
+            <div class="dot absolute left-1 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full transform transition-transform shadow-sm z-10 bg-white border border-gray-200 dark:border-gray-700" [class.translate-x-5]="isDark" [class.ring-2]="isDark" [class.ring-purple-500]="isDark" aria-hidden="true"></div>
           </div>
+        </button>
+        <!-- Hamburger (mobile) -->
+        <button (click)="toggleMenu()" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle menu">
+          <svg *ngIf="!menuOpen" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-gray-700 dark:text-white" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg *ngIf="menuOpen" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-gray-700 dark:text-white" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div *ngIf="menuOpen" class="md:hidden pb-3 flex flex-col gap-1 border-t border-gray-100 dark:border-gray-700 mt-1 pt-2">
+      <a routerLink="/" routerLinkActive="nav-active-mobile" [routerLinkActiveOptions]="{ exact: true }" (click)="menuOpen=false"
+        class="nav-link-mobile">About me</a>
+      <a routerLink="/projects" routerLinkActive="nav-active-mobile" (click)="menuOpen=false"
+        class="nav-link-mobile">Projects</a>
+      <a routerLink="/contact" routerLinkActive="nav-active-mobile" (click)="menuOpen=false"
+        class="nav-link-mobile">Contact</a>
     </div>
   </div>
 </header>
