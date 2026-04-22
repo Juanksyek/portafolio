@@ -3,3 +3,19 @@
   @apply absolute left-0 bottom-0 w-full h-[3px] bg-gradient-to-br to-blue-600 from-purple-600 rounded-sm;
   transform: skewX(-15deg);
 }
+
+.social-btn {
+  @apply flex items-center justify-center w-11 h-11 rounded-xl
+         bg-gray-50 dark:bg-gray-700
+         border border-gray-200 dark:border-gray-600
+         shadow-sm hover:shadow-md
+         hover:scale-110 hover:border-purple-400
+         transition-all duration-200;
+}
+
+.expertise-card {
+  @apply flex-1 rounded-2xl border border-gray-100 dark:border-gray-600
+         bg-white dark:bg-gray-700 shadow-md hover:shadow-xl
+         hover:-translate-y-1 transition-all duration-300 p-5;
+}
+
