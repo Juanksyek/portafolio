@@ -7,24 +7,16 @@ import { Injectable } from '@angular/core';
 export class DarkModeService {
   private isDarkMode = false;
 
-  toggleDarkMode(){
+  toggleDarkMode(): void {
     this.isDarkMode = !this.isDarkMode;
-    document.body.classList.toggle('dark',this.isDarkMode);
-    this.updateDotPosition();
-  }
-
-  private updateDotPosition(){
-    const dot = document.querySelector('.dot');
-    if(dot){
-      if(this.isDarkMode){
-        dot.classList.add('move');
-      } else {
-        dot.classList.remove('move');
-      }
+    if (this.isDarkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
     }
   }
 
-  isDarkModeEnabled(): boolean{
-    return this.isDarkMode
+  isDarkModeEnabled(): boolean {
+    return this.isDarkMode;
   }
 }
