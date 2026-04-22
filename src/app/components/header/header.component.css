@@ -5,15 +5,50 @@
   border: none;
 }
 
+.toggle-button {
+  padding: 0.125rem;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button:focus-visible {
+  box-shadow: 0 0 0 6px rgba(124,58,237,0.12);
+  border-radius: 9999px;
+}
+
 .dot {
   position: absolute;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.22s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 6px 12px rgba(2,6,23,0.16);
 }
 
-.dot.move {
-  transform: translateX(100%);
+
+/* Scrolled state */
+.scrolled-header {
+  @apply bg-white/95 dark:bg-gray-900/95 shadow-lg backdrop-blur-md;
 }
 
-.menu-color-mobile {
-  background-color: #8745ff;
+/* Nav links */
+.nav-link {
+  @apply px-4 py-2 rounded-lg font-medium text-sm text-gray-600 dark:text-gray-300
+         hover:text-purple-600 dark:hover:text-purple-400
+         hover:bg-purple-50 dark:hover:bg-gray-800
+         transition-all duration-200;
+}
+
+.nav-active {
+  @apply text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-gray-800 font-semibold;
+}
+
+/* Mobile nav */
+.nav-link-mobile {
+  @apply block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200
+         hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-gray-800
+         transition-all duration-200;
+}
+
+.nav-active-mobile {
+  @apply text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-gray-800 font-semibold;
 }
