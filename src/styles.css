@@ -2,60 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles.css o cualquier archivo CSS global */
+/* ─── Base ─────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-white text-black;
-}
-
-header{
-  @apply bg-gray-600 text-gray-400;
-}
-
-.dark .text-purple{
-  color: #8745ff
-}
-
-footer{
-  @apply bg-gray-600 text-gray-400;
+  @apply bg-gray-50 text-gray-900 antialiased;
 }
 
 .dark body {
-  @apply bg-gray-600 text-gray-400;
+  @apply bg-gray-900 text-gray-100;
 }
 
-/* Ejemplo de cómo aplicar estilos oscuros a otros elementos */
-.dark .tag {
-  @apply bg-gray-800 text-gray-400;
+/* ─── Main content offset for fixed header ──────────── */
+app-root > main,
+.main-content {
+  padding-top: 4rem; /* same as h-16 */
 }
 
-.hash {
-  color: #8745ff;
+/* ─── Purple accent ─────────────────────────────────── */
+.text-purple { color: #8745ff; }
+.dark .text-purple { color: #bb86fc; }
+.hash { color: #8745ff; }
+.dark .hash { color: #bb86fc; }
+
+/* ─── Dark tag ──────────────────────────────────────── */
+.dark .tag { @apply bg-gray-800 text-gray-400; }
+
+/* ─── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #8745ff; }
+body { scrollbar-width: thin; scrollbar-color: #8745ff transparent; }
+
+/* ─── Input / focus glow ────────────────────────────── */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(135, 69, 255, 0.2);
 }
 
-.dark .hash {
-  color: #bb86fc;
+/* ─── Blink cursor for typewriter ───────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
+.animate-blink { animation: blink 1s step-end infinite; }
 
-
-::-webkit-scrollbar {
-  width: 12px; 
+/* ─── Float animation for profile image ─────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
 }
+.animate-float { animation: float 3.5s ease-in-out infinite; }
 
-::-webkit-scrollbar-track {
-  background: #7c7c7c50; 
-  border-radius: 10px; 
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 10px; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #8745ff; 
-}
-
-body {
-  scrollbar-width: thin; 
-  scrollbar-color: #888 #f1f1f1; 
-}
