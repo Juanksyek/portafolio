@@ -1,5 +1,3 @@
-// src/app/utils/utils.ts
-//Menu en moviles
 export function selected(event: Event): void {
     const targeted = event.target as HTMLElement;
     const clicked = targeted.parentElement;
